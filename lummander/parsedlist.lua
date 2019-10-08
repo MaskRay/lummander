@@ -2,6 +2,9 @@
 -- @classmod ParsedList
 local ParsedList = {}
 ParsedList.__index = ParsedList
+
+local utils = require("lummander.utils")
+
 function create_parsed_list(list)
     list = list or {}
     return setmetatable(list,ParsedList)
@@ -14,7 +17,7 @@ end
 --      -- do something with eah element
 -- end)
 function ParsedList:for_each(fn)
-    utils.table.for_each(t, fn)
+    utils.table.for_each(self, fn)
 end
 
 return create_parsed_list
