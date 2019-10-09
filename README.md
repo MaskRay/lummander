@@ -415,6 +415,23 @@ return {
 
 *Note: if you dont define some style, this will be `white` by default.*
 
+`cli.theme` print with theme color defined the text
+```lua
+cli.theme.cli.title(text)
+cli.theme.cli.text(text)
+cli.theme.cli.category(text)
+cli.theme.command.definition(text)
+cli.theme.command.description(text)
+cli.theme.command.argument(text)
+cli.theme.command.option(text)
+cli.theme.command.category(text)
+cli.theme.primary(text)
+cli.theme.secondary(text)
+cli.theme.sucess(text)
+cli.theme.warning(text)
+cli.theme.error(text)
+```
+
 # <div id="cli-to-path">Add the CLI to the PATH</div>
 ## Windows
 Create a `.bat` or `.cmd` file what contains:
